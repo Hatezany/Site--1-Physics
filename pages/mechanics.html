@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Механика - PhysicsHub</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <i class="fas fa-atom"></i>
+                <span>PhysicsHub</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html"><i class="fas fa-home"></i> Главная</a></li>
+                <li><a href="../pages/thermodynamics.html"><i class="fas fa-temperature-high"></i> Термодинамика</a></li>
+                <li><a href="../pages/mechanics.html" class="active"><i class="fas fa-weight-hanging"></i> Механика</a></li>
+                <li><a href="../pages/electromagnetism.html"><i class="fas fa-bolt"></i> Электромагнетизм</a></li>
+                <li><a href="../pages/quantum.html"><i class="fas fa-atom"></i> Квантовая физика</a></li>
+                <li><a href="../pages/calculator.html"><i class="fas fa-calculator"></i> Калькулятор</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Заголовок страницы -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Механика</h1>
+            <p class="page-description">Раздел физики, изучающий движение материальных тел и взаимодействие между ними. Механика лежит в основе многих инженерных дисциплин и описывает законы движения от микроскопических частиц до космических объектов.</p>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="container">
+        <section class="content-section">
+            <div class="content-block fade-in">
+                <h2>Основные разделы механики</h2>
+                
+                <div class="topics-grid" style="margin-top: 30px;">
+                    <div class="topic-card">
+                        <div class="topic-icon">
+                            <i class="fas fa-road"></i>
+                        </div>
+                        <h3 class="topic-title">Кинематика</h3>
+                        <p class="topic-description">Изучает движение тел без рассмотрения причин, вызывающих это движение. Описывает траектории, скорости и ускорения.</p>
+                    </div>
+                    
+                    <div class="topic-card">
+                        <div class="topic-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3 class="topic-title">Динамика</h3>
+                        <p class="topic-description">Исследует причины движения тел — силы. Основывается на законах Ньютона и принципах сохранения.</p>
+                    </div>
+                    
+                    <div class="topic-card">
+                        <div class="topic-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3 class="topic-title">Статика</h3>
+                        <p class="topic-description">Изучает условия равновесия тел под действием сил. Важна для строительства и проектирования конструкций.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block fade-in">
+                <h2>Основные законы и формулы</h2>
+                
+                <table class="formulas-table">
+                    <thead>
+                        <tr>
+                            <th>Закон/Формула</th>
+                            <th>Формулировка</th>
+                            <th>Применение</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Первый закон Ньютона</strong></td>
+                            <td>Тело сохраняет состояние покоя или равномерного прямолинейного движения, пока внешние силы не заставят его изменить это состояние</td>
+                            <td>Инерция, системы отсчета</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Второй закон Ньютона</strong><br>F = m·a</td>
+                            <td>Ускорение тела прямо пропорционально силе, действующей на него, и обратно пропорционально его массе</td>
+                            <td>Динамика, расчет движения</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Третий закон Ньютона</strong></td>
+                            <td>Действию всегда есть равное и противоположное противодействие</td>
+                            <td>Взаимодействие тел, реактивное движение</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Закон всемирного тяготения</strong><br>F = G·(m₁·m₂)/r²</td>
+                            <td>Два тела притягиваются с силой, пропорциональной произведению их масс и обратно пропорциональной квадрату расстояния между ними</td>
+                            <td>Астрономия, орбитальное движение</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Кинетическая энергия</strong><br>Eₖ = (m·v²)/2</td>
+                            <td>Энергия движущегося тела</td>
+                            <td>Законы сохранения, столкновения</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Потенциальная энергия</strong><br>Eₚ = m·g·h</td>
+                            <td>Энергия тела, поднятого над Землей</td>
+                            <td>Механика, консервативные системы</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="content-block fade-in">
+                <h2>Калькулятор механических величин</h2>
+                <div class="calculator-grid">
+                    <div class="calculator-card">
+                        <h3>Кинетическая энергия</h3>
+                        <div class="input-group">
+                            <label for="kinetic-mass">Масса (кг):</label>
+                            <input type="number" id="kinetic-mass" placeholder="Введите массу">
+                        </div>
+                        <div class="input-group">
+                            <label for="kinetic-velocity">Скорость (м/с):</label>
+                            <input type="number" id="kinetic-velocity" placeholder="Введите скорость">
+                        </div>
+                        <button class="btn btn-primary" onclick="calculateKineticEnergy()">Рассчитать</button>
+                        <div class="calc-result" id="kinetic-result"></div>
+                    </div>
+                    
+                    <div class="calculator-card">
+                        <h3>Потенциальная энергия</h3>
+                        <div class="input-group">
+                            <label for="potential-mass">Масса (кг):</label>
+                            <input type="number" id="potential-mass" placeholder="Введите массу">
+                        </div>
+                        <div class="input-group">
+                            <label for="potential-height">Высота (м):</label>
+                            <input type="number" id="potential-height" placeholder="Введите высоту">
+                        </div>
+                        <button class="btn btn-primary" onclick="calculatePotentialEnergy()">Рассчитать</button>
+                        <div class="calc-result" id="potential-result"></div>
+                    </div>
+                    
+                    <div class="calculator-card">
+                        <h3>Скорость свободного падения</h3>
+                        <div class="input-group">
+                            <label for="fall-height">Высота (м):</label>
+                            <input type="number" id="fall-height" placeholder="Введите высоту">
+                        </div>
+                        <div class="input-group">
+                            <label for="fall-time">Время (с):</label>
+                            <input type="number" id="fall-time" placeholder="Введите время">
+                        </div>
+                        <button class="btn btn-primary" onclick="calculateFreeFall()">Рассчитать</button>
+                        <div class="calc-result" id="fall-result"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block fade-in">
+                <h2>Историческая справка</h2>
+                <p>Механика как наука начала формироваться в эпоху Возрождения. Труды Галилео Галилея заложили основы экспериментального метода в физике. Исаак Ньютон сформулировал три закона движения и закон всемирного тяготения, создав классическую механику.</p>
+                <p>В XX веке Альберт Эйнштейн развил релятивистскую механику, которая описывает движение тел со скоростями, близкими к скорости света. Квантовая механика, созданная Планком, Гейзенбергом и Шрёдингером, описывает движение микроскопических частиц.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="../index.html" class="logo">
+                        <i class="fas fa-atom"></i>
+                        <span>PhysicsHub</span>
+                    </a>
+                    <p>Образовательная платформа для изучения физики</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Разделы</h4>
+                    <ul>
+                        <li><a href="../pages/mechanics.html"><i class="fas fa-chevron-right"></i> Механика</a></li>
+                        <li><a href="../pages/thermodynamics.html"><i class="fas fa-chevron-right"></i> Термодинамика</a></li>
+                        <li><a href="../pages/electromagnetism.html"><i class="fas fa-chevron-right"></i> Электромагнетизм</a></li>
+                        <li><a href="../pages/quantum.html"><i class="fas fa-chevron-right"></i> Квантовая физика</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Инструменты</h4>
+                    <ul>
+                        <li><a href="../pages/calculator.html"><i class="fas fa-chevron-right"></i> Физический калькулятор</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Формулы</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Задачи</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Симуляции</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Контакты</h4>
+                    <p><i class="fas fa-envelope"></i> contact@physicshub.ru</p>
+                    <p><i class="fas fa-phone"></i> +7 (XXX) XXX-XX-XX</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 PhysicsHub. Все права защищены.</p>
+                <p>Сайт создан для образовательных целей.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // Функции для калькулятора механики
+        function calculateKineticEnergy() {
+            const mass = parseFloat(document.getElementById('kinetic-mass').value);
+            const velocity = parseFloat(document.getElementById('kinetic-velocity').value);
+            const resultElement = document.getElementById('kinetic-result');
+            
+            if (isNaN(mass) || isNaN(velocity)) {
+                resultElement.textContent = 'Пожалуйста, введите корректные числа';
+            } else {
+                const energy = 0.5 * mass * velocity * velocity;
+                resultElement.textContent = `Кинетическая энергия: ${energy.toFixed(2)} Дж`;
+            }
+            resultElement.classList.add('show');
+        }
+        
+        function calculatePotentialEnergy() {
+            const mass = parseFloat(document.getElementById('potential-mass').value);
+            const height = parseFloat(document.getElementById('potential-height').value);
+            const resultElement = document.getElementById('potential-result');
+            const g = 9.81; // ускорение свободного падения
+            
+            if (isNaN(mass) || isNaN(height)) {
+                resultElement.textContent = 'Пожалуйста, введите корректные числа';
+            } else {
+                const energy = mass * g * height;
+                resultElement.textContent = `Потенциальная энергия: ${energy.toFixed(2)} Дж`;
+            }
+            resultElement.classList.add('show');
+        }
+        
+        function calculateFreeFall() {
+            const height = parseFloat(document.getElementById('fall-height').value);
+            const time = parseFloat(document.getElementById('fall-time').value);
+            const resultElement = document.getElementById('fall-result');
+            const g = 9.81;
+            
+            if (!isNaN(height) && isNaN(time)) {
+                // Рассчитать по высоте
+                const velocity = Math.sqrt(2 * g * height);
+                const fallTime = Math.sqrt(2 * height / g);
+                resultElement.textContent = `Скорость при падении: ${velocity.toFixed(2)} м/с\nВремя падения: ${fallTime.toFixed(2)} с`;
+            } else if (!isNaN(time) && isNaN(height)) {
+                // Рассчитать по времени
+                const velocity = g * time;
+                const fallHeight = 0.5 * g * time * time;
+                resultElement.textContent = `Скорость: ${velocity.toFixed(2)} м/с\nВысота: ${fallHeight.toFixed(2)} м`;
+            } else if (!isNaN(height) && !isNaN(time)) {
+                // Оба параметра заданы
+                const velocity = g * time;
+                resultElement.textContent = `Скорость: ${velocity.toFixed(2)} м/с`;
+            } else {
+                resultElement.textContent = 'Введите хотя бы один параметр (высоту или время)';
+            }
+            resultElement.classList.add('show');
+        }
+    </script>
+</body>
+</html>
