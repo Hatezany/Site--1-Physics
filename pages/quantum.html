@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Квантовая физика - PhysicsHub</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <i class="fas fa-atom"></i>
+                <span>PhysicsHub</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html"><i class="fas fa-home"></i> Главная</a></li>
+                <li><a href="../pages/mechanics.html"><i class="fas fa-weight-hanging"></i> Механика</a></li>
+                <li><a href="../pages/thermodynamics.html"><i class="fas fa-temperature-high"></i> Термодинамика</a></li>
+                <li><a href="../pages/electromagnetism.html"><i class="fas fa-bolt"></i> Электромагнетизм</a></li>
+                <li><a href="../pages/quantum.html" class="active"><i class="fas fa-atom"></i> Квантовая физика</a></li>
+                <li><a href="../pages/calculator.html"><i class="fas fa-calculator"></i> Калькулятор</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Заголовок страницы -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Квантовая физика</h1>
+            <p class="page-description">Фундаментальная физическая теория, описывающая свойства и поведение микроскопических частиц на уровне атомов и субатомных частиц. Квантовая физика радикально отличается от классической физики, вводя понятия квантования, волновой функции и принципа неопределенности.</p>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="container">
+        <section class="content-section">
+            <div class="content-block fade-in">
+                <h2>Основные концепции квантовой физики</h2>
+                
+                <div class="topics-grid" style="margin-top: 30px;">
+                    <div class="topic-card">
+                        <div class="topic-icon">
+                            <i class="fas fa-wave-square"></i>
+                        </div>
+                        <h3 class="topic-title">Корпускулярно-волновой дуализм</h3>
+                        <p class="topic-description">Частицы обладают как свойствами волн, так и свойствами частиц. Свет ведет себя и как волна, и как поток фотонов.</p>
+                    </div>
+                    
+                    <div class="topic-card">
+                        <div class="topic-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <h3 class="topic-title">Принцип неопределенности</h3>
+                        <p class="topic-description">Невозможно одновременно точно измерить координату и импульс частицы: Δx·Δp ≥ ħ/2.</p>
+                    </div>
+                    
+                    <div class="topic-card">
+                        <div class="topic-icon">
+                            <i class="fas fa-dice"></i>
+                        </div>
+                        <h3 class="topic-title">Вероятностное описание</h3>
+                        <p class="topic-description">Поведение квантовых систем описывается вероятностями, а не определенными значениями.</p>
+                    </div>
+                    
+                    <div class="topic-card">
+                        <div class="topic-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3 class="topic-title">Квантовая суперпозиция</h3>
+                        <p class="topic-description">Квантовая система может находиться в нескольких состояниях одновременно до момента измерения.</p>
+                    </div>
+                    
+                    <div class="topic-card">
+                        <div class="topic-icon">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <h3 class="topic-title">Квантовая запутанность</h3>
+                        <p class="topic-description">Состояния двух или более частиц оказываются взаимосвязанными, даже если они разделены большими расстояниями.</p>
+                    </div>
+                    
+                    <div class="topic-card">
+                        <div class="topic-icon">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <h3 class="topic-title">Квантование энергии</h3>
+                        <p class="topic-description">Энергия в квантовых системах принимает только определенные дискретные значения.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block fade-in">
+                <h2>Основные уравнения квантовой механики</h2>
+                
+                <div style="background: rgba(0, 173, 181, 0.1); padding: 25px; border-radius: var(--border-radius); margin: 25px 0; border-left: 4px solid var(--secondary-color);">
+                    <h3 style="color: var(--secondary-color); margin-top: 0;">Уравнение Шрёдингера</h3>
+                    <div style="text-align: center; font-size: 1.5rem; margin: 20px 0; color: var(--text-color); font-family: 'Roboto', sans-serif;">
+                        iħ ∂Ψ/∂t = ĤΨ
+                    </div>
+                    <p style="color: var(--text-light); line-height: 1.7;">
+                        Это основное уравнение нерелятивистской квантовой механики, описывающее эволюцию волновой функции Ψ во времени. Здесь ħ — приведенная постоянная Планка, Ĥ — гамильтониан системы (оператор полной энергии).
+                    </p>
+                </div>
+                
+                <div style="background: rgba(255, 87, 34, 0.1); padding: 25px; border-radius: var(--border-radius); margin: 25px 0; border-left: 4px solid var(--accent-color);">
+                    <h3 style="color: var(--accent-color); margin-top: 0;">Стационарное уравнение Шрёдингера</h3>
+                    <div style="text-align: center; font-size: 1.5rem; margin: 20px 0; color: var(--text-color); font-family: 'Roboto', sans-serif;">
+                        ĤΨ = EΨ
+                    </div>
+                    <p style="color: var(--text-light); line-height: 1.7;">
+                        Описывает состояния с определенной энергией E. Решения этого уравнения определяют возможные энергетические уровни системы и соответствующие им волновые функции.
+                    </p>
+                </div>
+            </div>
+
+            <div class="content-block fade-in">
+                <h2>Основные формулы квантовой физики</h2>
+                
+                <table class="formulas-table">
+                    <thead>
+                        <tr>
+                            <th>Формула</th>
+                            <th>Описание</th>
+                            <th>Значение</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>E = h·ν</strong></td>
+                            <td>Энергия фотона</td>
+                            <td>h — постоянная Планка, ν — частота</td>
+                        </tr>
+                        <tr>
+                            <td><strong>λ = h/p</strong></td>
+                            <td>Формула де Бройля для длины волны частицы</td>
+                            <td>λ — длина волны, p — импульс</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Δx·Δp ≥ ħ/2</strong></td>
+                            <td>Принцип неопределенности Гейзенберга</td>
+                            <td>Δx — неопределенность координаты, Δp — неопределенность импульса</td>
+                        </tr>
+                        <tr>
+                            <td><strong>E<sub>n</sub> = -13.6/n² эВ</strong></td>
+                            <td>Энергетические уровни атома водорода</td>
+                            <td>n — главное квантовое число</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ψ(x) = √(2/L)·sin(nπx/L)</strong></td>
+                            <td>Волновая функция частицы в бесконечно глубокой потенциальной яме</td>
+                            <td>L — ширина ямы, n — квантовое число</td>
+                        </tr>
+                        <tr>
+                            <td><strong>E = ħω(n + 1/2)</strong></td>
+                            <td>Энергия квантового гармонического осциллятора</td>
+                            <td>ω — частота осциллятора, n — квантовое число</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="content-block fade-in">
+                <h2>Калькулятор квантовых величин</h2>
+                <div class="calculator-grid">
+                    <div class="calculator-card">
+                        <h3>Энергия фотона</h3>
+                        <div class="input-group">
+                            <label for="photon-wavelength">Длина волны (нм):</label>
+                            <input type="number" id="photon-wavelength" placeholder="Введите длину волны">
+                        </div>
+                        <button class="btn btn-primary" onclick="calculatePhotonEnergy()">Рассчитать</button>
+                        <div class="calc-result" id="photon-result"></div>
+                    </div>
+                    
+                    <div class="calculator-card">
+                        <h3>Длина волны де Бройля</h3>
+                        <div class="input-group">
+                            <label for="particle-mass">Масса (кг):</label>
+                            <input type="number" id="particle-mass" placeholder="Введите массу">
+                        </div>
+                        <div class="input-group">
+                            <label for="particle-velocity">Скорость (м/с):</label>
+                            <input type="number" id="particle-velocity" placeholder="Введите скорость">
+                        </div>
+                        <button class="btn btn-primary" onclick="calculateDeBroglie()">Рассчитать</button>
+                        <div class="calc-result" id="debrogile-result"></div>
+                    </div>
+                    
+                    <div class="calculator-card">
+                        <h3>Энергия атома водорода</h3>
+                        <div class="input-group">
+                            <label for="quantum-number">Квантовое число n:</label>
+                            <input type="number" id="quantum-number" placeholder="Введите n" min="1">
+                        </div>
+                        <button class="btn btn-primary" onclick="calculateHydrogenEnergy()">Рассчитать</button>
+                        <div class="calc-result" id="hydrogen-result"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block fade-in">
+                <h2>Историческое развитие квантовой теории</h2>
+                
+                <div style="display: flex; flex-direction: column; gap: 25px; margin-top: 20px;">
+                    <div style="background: rgba(0, 173, 181, 0.05); padding: 20px; border-radius: var(--border-radius); border: 1px solid var(--border-color);">
+                        <h4 style="color: var(--secondary-color); margin-bottom: 10px;">1900 год — Квантовая гипотеза Планка</h4>
+                        <p style="color: var(--text-light);">Макс Планк предположил, что энергия излучается и поглощается дискретными порциями — квантами. Это объяснило спектр излучения абсолютно черного тела.</p>
+                    </div>
+                    
+                    <div style="background: rgba(0, 173, 181, 0.05); padding: 20px; border-radius: var(--border-radius); border: 1px solid var(--border-color);">
+                        <h4 style="color: var(--secondary-color); margin-bottom: 10px;">1905 год — Фотонная теория Эйнштейна</h4>
+                        <p style="color: var(--text-light);">Альберт Эйнштейн объяснил фотоэффект, предположив, что свет состоит из дискретных частиц — фотонов, энергия которых E = hν.</p>
+                    </div>
+                    
+                    <div style="background: rgba(0, 173, 181, 0.05); padding: 20px; border-radius: var(--border-radius); border: 1px solid var(--border-color);">
+                        <h4 style="color: var(--secondary-color); margin-bottom: 10px;">1913 год — Модель атома Бора</h4>
+                        <p style="color: var(--text-light);">Нильс Бор предложил модель атома с квантованными орбитами электронов, объяснив спектральные линии водорода.</p>
+                    </div>
+                    
+                    <div style="background: rgba(0, 173, 181, 0.05); padding: 20px; border-radius: var(--border-radius); border: 1px solid var(--border-color);">
+                        <h4 style="color: var(--secondary-color); margin-bottom: 10px;">1924 год — Гипотеза де Бройля</h4>
+                        <p style="color: var(--text-light);">Луи де Бройль предположил, что частицы обладают волновыми свойствами, введя понятие волн материи.</p>
+                    </div>
+                    
+                    <div style="background: rgba(0, 173, 181, 0.05); padding: 20px; border-radius: var(--border-radius); border: 1px solid var(--border-color);">
+                        <h4 style="color: var(--secondary-color); margin-bottom: 10px;">1925-1927 годы — Формулировка квантовой механики</h4>
+                        <p style="color: var(--text-light);">Вернер Гейзенберг, Эрвин Шрёдингер, Поль Дирак и другие разработали математический аппарат квантовой механики.</p>
+                    </div>
+                </div>
+                
+                <p style="margin-top: 30px; color: var(--text-light);">Квантовая физика продолжает развиваться, порождая новые области исследований, такие как квантовая информация, квантовая оптика и квантовая теория поля. Её практические применения включают лазеры, транзисторы, МРТ и квантовые компьютеры.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="../index.html" class="logo">
+                        <i class="fas fa-atom"></i>
+                        <span>PhysicsHub</span>
+                    </a>
+                    <p>Образовательная платформа для изучения физики</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Разделы</h4>
+                    <ul>
+                        <li><a href="../pages/mechanics.html"><i class="fas fa-chevron-right"></i> Механика</a></li>
+                        <li><a href="../pages/thermodynamics.html"><i class="fas fa-chevron-right"></i> Термодинамика</a></li>
+                        <li><a href="../pages/electromagnetism.html"><i class="fas fa-chevron-right"></i> Электромагнетизм</a></li>
+                        <li><a href="../pages/quantum.html"><i class="fas fa-chevron-right"></i> Квантовая физика</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Инструменты</h4>
+                    <ul>
+                        <li><a href="../pages/calculator.html"><i class="fas fa-chevron-right"></i> Физический калькулятор</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Формулы</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Задачи</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Симуляции</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Контакты</h4>
+                    <p><i class="fas fa-envelope"></i> contact@physicshub.ru</p>
+                    <p><i class="fas fa-phone"></i> +7 (XXX) XXX-XX-XX</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 PhysicsHub. Все права защищены.</p>
+                <p>Сайт создан для образовательных целей.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // Функции для калькулятора квантовой физики
+        function calculatePhotonEnergy() {
+            const wavelength = parseFloat(document.getElementById('photon-wavelength').value);
+            const resultElement = document.getElementById('photon-result');
+            const h = 6.626e-34; // постоянная Планка
+            const c = 3e8; // скорость света
+            
+            if (isNaN(wavelength)) {
+                resultElement.textContent = 'Пожалуйста, введите длину волны';
+            } else if (wavelength <= 0) {
+                resultElement.textContent = 'Длина волны должна быть больше нуля';
+            } else {
+                const wavelengthM = wavelength * 1e-9; // преобразуем нм в м
+                const energy = (h * c) / wavelengthM;
+                const energyEv = energy / 1.602e-19; // преобразуем Дж в эВ
+                resultElement.textContent = `Энергия фотона: ${energy.toExponential(4)} Дж\n(${energyEv.toFixed(4)} эВ)`;
+            }
+            resultElement.classList.add('show');
+        }
+        
+        function calculateDeBroglie() {
+            const mass = parseFloat(document.getElementById('particle-mass').value);
+            const velocity = parseFloat(document.getElementById('particle-velocity').value);
+            const resultElement = document.getElementById('debrogile-result');
+            const h = 6.626e-34;
+            
+            if (isNaN(mass) || isNaN(velocity)) {
+                resultElement.textContent = 'Пожалуйста, введите оба значения';
+            } else if (mass <= 0) {
+                resultElement.textContent = 'Масса должна быть больше нуля';
+            } else if (velocity <= 0) {
+                resultElement.textContent = 'Скорость должна быть больше нуля';
+            } else {
+                const momentum = mass * velocity;
+                const wavelength = h / momentum;
+                resultElement.textContent = `Длина волны де Бройля: ${wavelength.toExponential(4)} м`;
+            }
+            resultElement.classList.add('show');
+        }
+        
+        function calculateHydrogenEnergy() {
+            const n = parseInt(document.getElementById('quantum-number').value);
+            const resultElement = document.getElementById('hydrogen-result');
+            
+            if (isNaN(n) || n < 1) {
+                resultElement.textContent = 'Квантовое число должно быть целым числом ≥ 1';
+            } else {
+                const energy = -13.6 / (n * n);
+                resultElement.textContent = `Энергия электрона в атоме водорода: ${energy.toFixed(4)} эВ`;
+            }
+            resultElement.classList.add('show');
+        }
+    </script>
+</body>
+</html>
