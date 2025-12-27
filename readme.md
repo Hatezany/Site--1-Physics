@@ -16,7 +16,8 @@ physics-hub/
 │   └── style.css                    # Основные стили (CSS)
 ├── js/
 │   └── script.js                    # Основной JavaScript      
-└── README.md                        # Документация
+├── README.md                        # Документация
+└── README-EU.md                     # Documentation
 ```
 
 ## 🌐 Основные разделы сайта
