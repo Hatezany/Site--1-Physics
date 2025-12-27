@@ -5,18 +5,18 @@
 ## 📁 Структура проекта
 ```bash
 physics-hub/
-├── index.html                    # Главная страница
-├── mechanics.html                # Раздел "Механика"
-├── thermodynamics.html           # Раздел "Термодинамика"
-├── electromagnetism.html         # Раздел "Электромагнетизм"
-├── quantum.html                  # Раздел "Квантовая физика"
-├── calculator.html               # Универсальный физический калькулятор
+├── index.html                       # Главная страница
+├──pages/
+│  ├──mechanics.html                 # Раздел "Механика"
+│  ├── thermodynamics.html           # Раздел "Термодинамика"
+│  ├── electromagnetism.html         # Раздел "Электромагнетизм"
+│  ├── quantum.html                  # Раздел "Квантовая физика"
+│  └── calculator.html               # Универсальный физический калькулятор
 ├── styles/
-│   └── style.css                # Основные стили (CSS)
+│   └── style.css                    # Основные стили (CSS)
 ├── js/
-│   └── script.js                # Основной JavaScript
-├── assets/                      # Изображения и иконки (опционально)
-└── README.md                    # Документация
+│   └── script.js                    # Основной JavaScript      
+└── README.md                        # Документация
 ```
 
 ## 🌐 Основные разделы сайта
