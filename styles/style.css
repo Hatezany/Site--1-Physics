@@ -1,0 +1,906 @@
+/* styles-dark.css */
+/* CSS Reset и базовые стили для темной темы */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Основные цвета темной темы */
+    --primary-color: #0f172a;
+    --secondary-color: #3b82f6;
+    --accent-color: #ef4444;
+    --light-color: #1e293b;
+    --dark-color: #0a0f1e;
+    --text-color: #e2e8f0;
+    --text-light: #94a3b8;
+    --text-lighter: #64748b;
+    --card-bg: #1e293b;
+    --input-bg: #334155;
+    --border-color: #475569;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+    
+    /* Градиенты для темной темы */
+    --gradient-primary: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    --gradient-secondary: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    --gradient-accent: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    --gradient-card: linear-gradient(145deg, #1e293b 0%, #1a2437 100%);
+    
+    /* Эффекты */
+    --border-radius: 12px;
+    --border-radius-sm: 8px;
+    --box-shadow: 0 10px 25px var(--shadow-color);
+    --box-shadow-light: 0 5px 15px var(--shadow-color);
+    --box-shadow-heavy: 0 15px 35px rgba(0, 0, 0, 0.5);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    --max-width: 1200px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', sans-serif;
+    line-height: 1.7;
+    color: var(--text-color);
+    background: var(--gradient-primary);
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Контейнер - ИСПРАВЛЕНО */
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes glow {
+    0%, 100% { 
+        box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    }
+    50% { 
+        box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+    }
+}
+
+/* Типография для темной темы */
+h1, h2, h3, h4 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+    color: var(--text-color);
+}
+
+h1 {
+    font-size: 3.2rem;
+    background: linear-gradient(90deg, var(--secondary-color), #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.5px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--gradient-secondary);
+    border-radius: 2px;
+}
+
+h3 {
+    font-size: 1.75rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: #60a5fa;
+}
+
+/* Кнопки для темной темы */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    border-radius: var(--border-radius-sm);
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+    gap: 8px;
+}
+
+.btn-primary {
+    background: var(--gradient-secondary);
+    color: white;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+.btn-secondary:hover {
+    background: rgba(59, 130, 246, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.2);
+}
+
+/* Навигация для темной темы */
+.navbar {
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--box-shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(71, 85, 105, 0.3);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-color);
+    gap: 10px;
+}
+
+.logo i {
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 0;
+}
+
+.nav-links a i {
+    font-size: 1.1rem;
+}
+
+.nav-links a.active {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Герой секция для темной темы - ПОЛНОСТЬЮ ИСПРАВЛЕНО */
+.hero {
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+    padding: 100px 0;
+    position: relative;
+    width: 100%;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    width: 100%;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-light);
+    margin-bottom: 35px;
+    line-height: 1.8;
+    max-width: 500px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.hero-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.8s ease-out 0.2s both;
+}
+
+.physics-animation {
+    width: 350px;
+    height: 350px;
+    background: var(--gradient-card);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: var(--box-shadow-heavy);
+    animation: float 6s ease-in-out infinite;
+}
+
+.physics-animation::before {
+    content: '';
+    position: absolute;
+    width: 85%;
+    height: 85%;
+    border-radius: 50%;
+    background: var(--dark-color);
+    z-index: 1;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Секции для темной темы */
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+    color: var(--text-color);
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--gradient-secondary);
+    border-radius: 2px;
+}
+
+/* Карточки разделов для темной темы */
+.topics-section {
+    padding: 100px 0;
+    background: rgba(30, 41, 59, 0.5);
+}
+
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 35px;
+}
+
+.topic-card {
+    background: var(--gradient-card);
+    border-radius: var(--border-radius);
+    padding: 35px 30px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    border: 1px solid rgba(71, 85, 105, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.topic-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--box-shadow-heavy);
+    border-color: var(--secondary-color);
+}
+
+.topic-icon {
+    font-size: 2.8rem;
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.topic-title {
+    font-size: 1.6rem;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.topic-description {
+    color: var(--text-light);
+    margin-bottom: 25px;
+    text-align: center;
+    line-height: 1.7;
+}
+
+.topic-link {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+    margin: 0 auto;
+    justify-content: center;
+    width: 100%;
+}
+
+.topic-link i {
+    margin-left: 8px;
+    transition: var(--transition);
+}
+
+.topic-link:hover i {
+    transform: translateX(8px);
+}
+
+/* Интерактивная секция для темной темы */
+.interactive-section {
+    padding: 100px 0;
+    background: rgba(15, 23, 42, 0.8);
+}
+
+.formula-card {
+    display: flex;
+    background: var(--gradient-card);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    max-width: 900px;
+    margin: 0 auto;
+    border: 1px solid rgba(71, 85, 105, 0.3);
+}
+
+.formula-display {
+    flex: 1;
+    padding: 45px;
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    color: white;
+    border-right: 1px solid rgba(71, 85, 105, 0.3);
+}
+
+.formula {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 25px 0;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    color: var(--secondary-color);
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+}
+
+.formula-description {
+    font-style: italic;
+    color: var(--text-light);
+    text-align: center;
+    line-height: 1.7;
+}
+
+.formula-calculator {
+    flex: 1;
+    padding: 45px;
+}
+
+.formula-calculator h4 {
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+    font-size: 1.4rem;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 18px;
+    background: var(--input-bg);
+    border: 1px solid rgba(71, 85, 105, 0.5);
+    border-radius: var(--border-radius-sm);
+    font-size: 1rem;
+    transition: var(--transition);
+    color: var(--text-color);
+}
+
+.input-group input:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.result {
+    margin-top: 25px;
+    padding: 20px;
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: var(--border-radius);
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    color: var(--secondary-color);
+    display: none;
+}
+
+.result.show {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Секция физиков для темной темы */
+.physicists-section {
+    padding: 100px 0;
+    background: rgba(30, 41, 59, 0.5);
+}
+
+.physicists-slider {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.physicist-card {
+    background: var(--gradient-card);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    display: none;
+    animation: fadeIn 0.5s ease;
+    border: 1px solid rgba(71, 85, 105, 0.3);
+}
+
+.physicist-card.active {
+    display: flex;
+}
+
+.physicist-image {
+    flex: 0 0 180px;
+    background: var(--gradient-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.physicist-image i {
+    font-size: 6rem;
+    color: white;
+    opacity: 0.9;
+}
+
+.physicist-info {
+    flex: 1;
+    padding: 35px;
+}
+
+.physicist-years {
+    color: var(--secondary-color);
+    font-style: italic;
+    margin-bottom: 18px;
+    font-weight: 500;
+}
+
+.physicist-contribution {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-light);
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.slider-btn {
+    background: var(--gradient-secondary);
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.slider-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+.slider-dots {
+    display: flex;
+    gap: 12px;
+}
+
+.dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(71, 85, 105, 0.5);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.dot.active {
+    background: var(--secondary-color);
+    transform: scale(1.2);
+}
+
+/* Футер для темной темы */
+.footer {
+    background: #0a0f1e;
+    color: white;
+    padding: 70px 0 30px;
+    border-top: 1px solid rgba(71, 85, 105, 0.5);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.footer-logo p {
+    margin-top: 20px;
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+.footer-links h4 {
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+    font-size: 1.3rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-links h4:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--gradient-secondary);
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.footer-links a i {
+    margin-right: 10px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.footer-links a:hover {
+    color: var(--secondary-color);
+    transform: translateX(5px);
+}
+
+.footer-contact p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: var(--text-light);
+}
+
+.footer-contact i {
+    margin-right: 12px;
+    color: var(--secondary-color);
+    width: 20px;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    color: var(--text-light);
+    transition: var(--transition);
+    font-size: 1.1rem;
+}
+
+.social-icons a:hover {
+    background: var(--gradient-secondary);
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(71, 85, 105, 0.5);
+    color: var(--text-light);
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .hero {
+        padding: 80px 0;
+    }
+    
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+    }
+    
+    .hero-subtitle {
+        max-width: 100%;
+    }
+    
+    .formula-card {
+        flex-direction: column;
+    }
+    
+    .formula-display {
+        border-right: none;
+        border-bottom: 1px solid rgba(71, 85, 105, 0.3);
+    }
+    
+    .hero-title {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: rgba(15, 23, 42, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        border-top: 1px solid rgba(71, 85, 105, 0.3);
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        margin: 10px 0;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .topics-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .physicist-card.active {
+        flex-direction: column;
+    }
+    
+    .physicist-image {
+        flex: 0 0 120px;
+        padding: 20px;
+    }
+    
+    .physicist-image i {
+        font-size: 4rem;
+    }
+    
+    .physics-animation {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .formula {
+        font-size: 3rem;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+}
+
+/* Кастомный скроллбар */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 6px;
+    border: 3px solid var(--dark-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2563eb;
+}
+
+/* Стили для выделения текста */
+::selection {
+    background: rgba(59, 130, 246, 0.3);
+    color: white;
+}
+
+/* Анимация атома */
+@keyframes electronOrbit {
+    0% { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
+}
+
+.physics-animation::after {
+    content: '';
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    border: 1px dashed rgba(59, 130, 246, 0.3);
+    border-radius: 50%;
+    animation: electronOrbit 10s linear infinite;
+}
