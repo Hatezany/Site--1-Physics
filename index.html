@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhysicsHub - Изучайте физику с нами</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-atom"></i>
+                <span>PhysicsHub</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> Главная</a></li>
+                <li><a href="pages/thermodynamics.html"><i class="fas fa-weight-hanging"></i> Механика</a></li>
+                <li><a href="pages/thermodynamics.html"><i class="fas fa-temperature-high"></i> Термодинамика</a></li>
+                <li><a href="pages/electromagnetism.html"><i class="fas fa-bolt"></i> Электромагнетизм</a></li>
+                <li><a href="pages/quantum.html"><i class="fas fa-atom"></i> Квантовая физика</a></li>
+                <li><a href="pages/calculator.html"><i class="fas fa-calculator"></i> Калькулятор</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <main class="container">
+        <!-- Герой секция -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Исследуйте законы вселенной</h1>
+                <p class="hero-subtitle">PhysicsHub - это платформа для изучения фундаментальных законов физики через интерактивные материалы, симуляции и задачи.</p>
+                <div class="hero-buttons">
+                    <a href="#topics" class="btn btn-primary">Начать изучение</a>
+                    <a href="calculator.html" class="btn btn-secondary">Физический калькулятор</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="physics-animation" id="physicsAnimation">
+                    <!-- Анимация будет добавлена через JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Разделы физики -->
+        <section class="topics-section" id="topics">
+            <h2 class="section-title">Основные разделы физики</h2>
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <div class="topic-icon">
+                        <i class="fas fa-weight-hanging"></i>
+                    </div>
+                    <h3 class="topic-title">Механика</h3>
+                    <p class="topic-description">Изучение движения тел под действием сил. Включает кинематику, динамику и статику.</p>
+                    <a href="pages/mechanics.html" class="topic-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="topic-card">
+                    <div class="topic-icon">
+                        <i class="fas fa-temperature-high"></i>
+                    </div>
+                    <h3 class="topic-title">Термодинамика</h3>
+                    <p class="topic-description">Наука о тепле, температуре и преобразовании энергии из одной формы в другую.</p>
+                    <a href="pages/thermodynamics.html" class="topic-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="topic-card">
+                    <div class="topic-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="topic-title">Электромагнетизм</h3>
+                    <p class="topic-description">Изучение электрических и магнитных явлений, их взаимосвязи и применения.</p>
+                    <a href="pages/electromagnetism.html" class="topic-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="topic-card">
+                    <div class="topic-icon">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h3 class="topic-title">Квантовая физика</h3>
+                    <p class="topic-description">Фундаментальная теория, описывающая поведение материи и энергии на микроуровне.</p>
+                    <a href="pages/quantum.html" class="topic-link">Подробнее <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Интерактивный элемент -->
+        <section class="interactive-section">
+            <h2 class="section-title">Формула дня</h2>
+            <div class="formula-card">
+                <div class="formula-display">
+                    <h3>Второй закон Ньютона</h3>
+                    <div class="formula">F = m · a</div>
+                    <p class="formula-description">Сила, действующая на тело, равна произведению массы тела на его ускорение.</p>
+                </div>
+                <div class="formula-calculator">
+                    <h4>Калькулятор силы</h4>
+                    <div class="input-group">
+                        <label for="mass">Масса (кг):</label>
+                        <input type="number" id="mass" placeholder="Введите массу" min="0" step="0.1">
+                    </div>
+                    <div class="input-group">
+                        <label for="acceleration">Ускорение (м/с²):</label>
+                        <input type="number" id="acceleration" placeholder="Введите ускорение" step="0.1">
+                    </div>
+                    <button id="calculateForce" class="btn btn-primary">Рассчитать силу</button>
+                    <div class="result" id="forceResult"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Знаменитые физики -->
+        <section class="physicists-section">
+            <h2 class="section-title">Великие физики</h2>
+            <div class="physicists-slider">
+                <div class="physicist-card active">
+                    <div class="physicist-image">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="physicist-info">
+                        <h3>Исаак Ньютон</h3>
+                        <p class="physicist-years">1643-1727</p>
+                        <p class="physicist-contribution">Сформулировал законы движения и всемирного тяготения, заложив основы классической механики.</p>
+                    </div>
+                </div>
+                
+                <div class="physicist-card">
+                    <div class="physicist-image">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="physicist-info">
+                        <h3>Альберт Эйнштейн</h3>
+                        <p class="physicist-years">1879-1955</p>
+                        <p class="physicist-contribution">Разработал теорию относительности и объяснил фотоэлектрический эффект.</p>
+                    </div>
+                </div>
+                
+                <div class="physicist-card">
+                    <div class="physicist-image">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="physicist-info">
+                        <h3>Мария Кюри</h3>
+                        <p class="physicist-years">1867-1934</p>
+                        <p class="physicist-contribution">Исследовала радиоактивность, открыла полоний и радий, дважды лауреат Нобелевской премии.</p>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button id="prevPhysicist" class="slider-btn"><i class="fas fa-chevron-left"></i></button>
+                    <div class="slider-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button id="nextPhysicist" class="slider-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-atom"></i>
+                        <span>PhysicsHub</span>
+                    </a>
+                    <p>Образовательная платформа для изучения физики</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Разделы</h4>
+                    <ul>
+                        <li><a href="pages/mechanics.html">Механика</a></li>
+                        <li><a href="pages/thermodynamics.html">Термодинамика</a></li>
+                        <li><a href="pages/electromagnetism.html">Электромагнетизм</a></li>
+                        <li><a href="pages/quantum.html">Квантовая физика</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Инструменты</h4>
+                    <ul>
+                        <li><a href="pages/calculator.html">Физический калькулятор</a></li>
+                        <li><a href="#">Формулы</a></li>
+                        <li><a href="#">Задачи</a></li>
+                        <li><a href="#">Симуляции</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Контакты</h4>
+                    <p><i class="fas fa-envelope"></i> contact@physicshub.ru</p>
+                    <p><i class="fas fa-phone"></i> +7 (XXX) XXX-XX-XX</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hatezany Dev. Сайт находятся в общем доступе.</p>
+                <p>Сайт создан для образовательных целей.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
