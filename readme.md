@@ -5,16 +5,18 @@
 ## 📁 Структура проекта
 
 physics-hub/
-├── index.html # Главная страница
-├── mechanics.html # Раздел "Механика"
-├── thermodynamics.html # Раздел "Термодинамика"
-├── electromagnetism.html # Раздел "Электромагнетизм"
-├── quantum.html # Раздел "Квантовая физика"
-├── calculator.html # Универсальный физический калькулятор
+├── index.html                    # Главная страница
+├── mechanics.html                # Раздел "Механика"
+├── thermodynamics.html           # Раздел "Термодинамика"
+├── electromagnetism.html         # Раздел "Электромагнетизм"
+├── quantum.html                  # Раздел "Квантовая физика"
+├── calculator.html               # Универсальный физический калькулятор
 ├── styles/
-│ └── style.css # Основные стили
-└── js/
-  └──script.js # Общий JavaScript для навигации и анимаций
+│   └── style.css                # Основные стили (CSS)
+├── js/
+│   └── script.js                # Основной JavaScript
+├── assets/                      # Изображения и иконки (опционально)
+└── README.md                    # Документация
 
 ## 🌐 Основные разделы сайта
 
