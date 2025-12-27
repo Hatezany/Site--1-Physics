@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Электромагнетизм - PhysicsHub</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <i class="fas fa-atom"></i>
+                <span>PhysicsHub</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html"><i class="fas fa-home"></i> Главная</a></li>
+                <li><a href="../pages/mechanics.html"><i class="fas fa-weight-hanging"></i> Механика</a></li>
+                <li><a href="../pages/thermodynamics.html"><i class="fas fa-temperature-high"></i> Термодинамика</a></li>
+                <li><a href="../pages/electromagnetism.html" class="active"><i class="fas fa-bolt"></i> Электромагнетизм</a></li>
+                <li><a href="../pages/quantum.html"><i class="fas fa-atom"></i> Квантовая физика</a></li>
+                <li><a href="../pages/calculator.html"><i class="fas fa-calculator"></i> Калькулятор</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Заголовок страницы -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Электромагнетизм</h1>
+            <p class="page-description">Раздел физики, изучающий электрические и магнитные явления и их взаимосвязь. Электромагнетизм объясняет такие явления как электрический ток, магнитное поле, электромагнитная индукция и лежит в основе современных технологий от электроники до энергетики.</p>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="container">
+        <section class="content-section">
+            <div class="content-block fade-in">
+                <h2>Основные разделы электромагнетизма</h2>
+                
+                <div class="topics-grid" style="margin-top: 30px;">
+                    <div class="topic-card">
+                        <div class="topic-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3 class="topic-title">Электростатика</h3>
+                        <p class="topic-description">Изучает взаимодействие неподвижных электрических зарядов, электрические поля и потенциалы.</p>
+                    </div>
+                    
+                    <div class="topic-card">
+                        <div class="topic-icon">
+                            <i class="fas fa-magnet"></i>
+                        </div>
+                        <h3 class="topic-title">Магнитостатика</h3>
+                        <p class="topic-description">Исследует магнитные поля постоянных магнитов и проводников с постоянным током.</p>
+                    </div>
+                    
+                    <div class="topic-card">
+                        <div class="topic-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <h3 class="topic-title">Электродинамика</h3>
+                        <p class="topic-description">Рассматривает взаимосвязь электрических и магнитных полей, переменные токи и электромагнитные волны.</p>
+                    </div>
+                    
+                    <div class="topic-card">
+                        <div class="topic-icon">
+                            <i class="fas fa-satellite-dish"></i>
+                        </div>
+                        <h3 class="topic-title">Электромагнитные волны</h3>
+                        <p class="topic-description">Изучает распространение электромагнитных волн, включая свет, радиоволны, рентгеновское излучение.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block fade-in">
+                <h2>Уравнения Максвелла</h2>
+                <p>Уравнения Максвелла представляют собой систему дифференциальных уравнений, описывающих электромагнитное поле и его взаимодействие с веществом. Эти четыре уравнения являются фундаментом классической электродинамики:</p>
+                
+                <div style="background: rgba(0, 173, 181, 0.1); padding: 25px; border-radius: var(--border-radius); margin: 25px 0; border-left: 4px solid var(--secondary-color);">
+                    <ol style="color: var(--text-light); line-height: 1.8;">
+                        <li><strong>Закон Гаусса для электрического поля:</strong> ∮<strong>E</strong>·d<strong>A</strong> = Q/ε₀</li>
+                        <li><strong>Закон Гаусса для магнитного поля:</strong> ∮<strong>B</strong>·d<strong>A</strong> = 0</li>
+                        <li><strong>Закон Фарадея:</strong> ∮<strong>E</strong>·d<strong>l</strong> = -dΦ<sub>B</sub>/dt</li>
+                        <li><strong>Закон Ампера-Максвелла:</strong> ∮<strong>B</strong>·d<strong>l</strong> = μ₀(I + ε₀dΦ<sub>E</sub>/dt)</li>
+                    </ol>
+                </div>
+                
+                <p>Эти уравнения предсказывают существование электромагнитных волн, распространяющихся со скоростью света, что привело к пониманию света как электромагнитного явления.</p>
+            </div>
+
+            <div class="content-block fade-in">
+                <h2>Основные формулы электромагнетизма</h2>
+                
+                <table class="formulas-table">
+                    <thead>
+                        <tr>
+                            <th>Формула</th>
+                            <th>Описание</th>
+                            <th>Применение</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>F = k·(q₁·q₂)/r²</strong></td>
+                            <td>Закон Кулона для силы взаимодействия точечных зарядов</td>
+                            <td>Электростатика, расчет сил</td>
+                        </tr>
+                        <tr>
+                            <td><strong>E = F/q</strong></td>
+                            <td>Напряженность электрического поля</td>
+                            <td>Характеристика электрического поля</td>
+                        </tr>
+                        <tr>
+                            <td><strong>U = A/q</strong></td>
+                            <td>Электрическое напряжение</td>
+                            <td>Разность потенциалов</td>
+                        </tr>
+                        <tr>
+                            <td><strong>I = U/R</strong></td>
+                            <td>Закон Ома для участка цепи</td>
+                            <td>Расчет электрических цепей</td>
+                        </tr>
+                        <tr>
+                            <td><strong>F = I·L·B·sinα</strong></td>
+                            <td>Сила Ампера, действующая на проводник с током в магнитном поле</td>
+                            <td>Электродвигатели, измерительные приборы</td>
+                        </tr>
+                        <tr>
+                            <td><strong>F = q·v·B·sinα</strong></td>
+                            <td>Сила Лоренца, действующая на заряженную частицу в магнитном поле</td>
+                            <td>Циклотроны, масс-спектрометры</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ε = -dΦ/dt</strong></td>
+                            <td>Закон электромагнитной индукции Фарадея</td>
+                            <td>Генераторы, трансформаторы</td>
+                        </tr>
+                        <tr>
+                            <td><strong>c = 1/√(ε₀μ₀)</strong></td>
+                            <td>Скорость света в вакууме</td>
+                            <td>Электромагнитные волны</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="content-block fade-in">
+                <h2>Калькулятор электромагнитных величин</h2>
+                <div class="calculator-grid">
+                    <div class="calculator-card">
+                        <h3>Закон Ома</h3>
+                        <div class="input-group">
+                            <label for="ohm-voltage">Напряжение (В):</label>
+                            <input type="number" id="ohm-voltage" placeholder="Введите напряжение">
+                        </div>
+                        <div class="input-group">
+                            <label for="ohm-resistance">Сопротивление (Ом):</label>
+                            <input type="number" id="ohm-resistance" placeholder="Введите сопротивление">
+                        </div>
+                        <button class="btn btn-primary" onclick="calculateOhmLaw()">Рассчитать ток</button>
+                        <div class="calc-result" id="ohm-result"></div>
+                    </div>
+                    
+                    <div class="calculator-card">
+                        <h3>Мощность электрического тока</h3>
+                        <div class="input-group">
+                            <label for="power-voltage">Напряжение (В):</label>
+                            <input type="number" id="power-voltage" placeholder="Введите напряжение">
+                        </div>
+                        <div class="input-group">
+                            <label for="power-current">Ток (А):</label>
+                            <input type="number" id="power-current" placeholder="Введите ток">
+                        </div>
+                        <button class="btn btn-primary" onclick="calculatePower()">Рассчитать мощность</button>
+                        <div class="calc-result" id="power-result"></div>
+                    </div>
+                    
+                    <div class="calculator-card">
+                        <h3>Сила Кулона</h3>
+                        <div class="input-group">
+                            <label for="coulomb-q1">Заряд 1 (Кл):</label>
+                            <input type="number" id="coulomb-q1" placeholder="Введите q₁">
+                        </div>
+                        <div class="input-group">
+                            <label for="coulomb-q2">Заряд 2 (Кл):</label>
+                            <input type="number" id="coulomb-q2" placeholder="Введите q₂">
+                        </div>
+                        <div class="input-group">
+                            <label for="coulomb-distance">Расстояние (м):</label>
+                            <input type="number" id="coulomb-distance" placeholder="Введите r">
+                        </div>
+                        <button class="btn btn-primary" onclick="calculateCoulomb()">Рассчитать силу</button>
+                        <div class="calc-result" id="coulomb-result"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block fade-in">
+                <h2>Историческая справка</h2>
+                <p>Изучение электричества и магнетизма началось еще в древности, но как единая наука электромагнетизм сформировался в XIX веке. Важные открытия были сделаны:</p>
+                
+                <ul style="color: var(--text-light); line-height: 1.8; padding-left: 20px; margin: 20px 0;">
+                    <li><strong>1785 год</strong> — Шарль Кулон сформулировал закон взаимодействия электрических зарядов</li>
+                    <li><strong>1820 год</strong> — Ханс Эрстед обнаружил магнитное действие электрического тока</li>
+                    <li><strong>1820-1826 годы</strong> — Андре-Мари Ампер разработал теорию электромагнетизма</li>
+                    <li><strong>1831 год</strong> — Майкл Фарадей открыл явление электромагнитной индукции</li>
+                    <li><strong>1861-1865 годы</strong> — Джеймс Клерк Максвелл создал теорию электромагнитного поля</li>
+                    <li><strong>1887 год</strong> — Генрих Герц экспериментально подтвердил существование электромагнитных волн</li>
+                </ul>
+                
+                <p>Работы Максвелла, объединившие электричество и магнетизм в единую теорию, считаются одним из величайших достижений физики XIX века и заложили основы современной электродинамики и теории относительности.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="../index.html" class="logo">
+                        <i class="fas fa-atom"></i>
+                        <span>PhysicsHub</span>
+                    </a>
+                    <p>Образовательная платформа для изучения физики</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Разделы</h4>
+                    <ul>
+                        <li><a href="../pages/mechanics.html"><i class="fas fa-chevron-right"></i> Механика</a></li>
+                        <li><a href="../pages/thermodynamics.html"><i class="fas fa-chevron-right"></i> Термодинамика</a></li>
+                        <li><a href="../pages/electromagnetism.html"><i class="fas fa-chevron-right"></i> Электромагнетизм</a></li>
+                        <li><a href="../pages/quantum.html"><i class="fas fa-chevron-right"></i> Квантовая физика</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Инструменты</h4>
+                    <ul>
+                        <li><a href="../pages/calculator.html"><i class="fas fa-chevron-right"></i> Физический калькулятор</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Формулы</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Задачи</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Симуляции</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Контакты</h4>
+                    <p><i class="fas fa-envelope"></i> contact@physicshub.ru</p>
+                    <p><i class="fas fa-phone"></i> +7 (XXX) XXX-XX-XX</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 PhysicsHub. Все права защищены.</p>
+                <p>Сайт создан для образовательных целей.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // Функции для калькулятора электромагнетизма
+        function calculateOhmLaw() {
+            const voltage = parseFloat(document.getElementById('ohm-voltage').value);
+            const resistance = parseFloat(document.getElementById('ohm-resistance').value);
+            const resultElement = document.getElementById('ohm-result');
+            
+            if (isNaN(voltage) || isNaN(resistance)) {
+                resultElement.textContent = 'Пожалуйста, введите оба значения';
+            } else if (resistance === 0) {
+                resultElement.textContent = 'Сопротивление не может быть равно нулю';
+            } else {
+                const current = voltage / resistance;
+                resultElement.textContent = `Сила тока: ${current.toFixed(4)} А`;
+            }
+            resultElement.classList.add('show');
+        }
+        
+        function calculatePower() {
+            const voltage = parseFloat(document.getElementById('power-voltage').value);
+            const current = parseFloat(document.getElementById('power-current').value);
+            const resultElement = document.getElementById('power-result');
+            
+            if (isNaN(voltage) || isNaN(current)) {
+                resultElement.textContent = 'Пожалуйста, введите оба значения';
+            } else {
+                const power = voltage * current;
+                resultElement.textContent = `Мощность: ${power.toFixed(2)} Вт`;
+            }
+            resultElement.classList.add('show');
+        }
+        
+        function calculateCoulomb() {
+            const q1 = parseFloat(document.getElementById('coulomb-q1').value);
+            const q2 = parseFloat(document.getElementById('coulomb-q2').value);
+            const distance = parseFloat(document.getElementById('coulomb-distance').value);
+            const resultElement = document.getElementById('coulomb-result');
+            const k = 9e9; // коэффициент k в законе Кулона
+            
+            if (isNaN(q1) || isNaN(q2) || isNaN(distance)) {
+                resultElement.textContent = 'Пожалуйста, введите все значения';
+            } else if (distance === 0) {
+                resultElement.textContent = 'Расстояние не может быть равно нулю';
+            } else {
+                const force = k * Math.abs(q1 * q2) / (distance * distance);
+                const type = (q1 * q2 > 0) ? 'отталкивания' : 'притяжения';
+                resultElement.textContent = `Сила ${type}: ${force.toFixed(4)} Н`;
+            }
+            resultElement.classList.add('show');
+        }
+    </script>
+</body>
+</html>
