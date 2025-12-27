@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Термодинамика - PhysicsHub</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <i class="fas fa-atom"></i>
+                <span>PhysicsHub</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html"><i class="fas fa-home"></i> Главная</a></li>
+                <li><a href="../pages/thermodynamics.html" class="active"><i class="fas fa-temperature-high"></i> Термодинамика</a></li>
+                <li><a href="../pages/mechanics.html"><i class="fas fa-weight-hanging"></i> Механика</a></li>
+                <li><a href="../pages/electromagnetism.html"><i class="fas fa-bolt"></i> Электромагнетизм</a></li>
+                <li><a href="../pages/quantum.html"><i class="fas fa-atom"></i> Квантовая физика</a></li>
+                <li><a href="../pages/calculator.html"><i class="fas fa-calculator"></i> Калькулятор</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Заголовок страницы -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Термодинамика</h1>
+            <p class="page-description">Раздел физики, изучающий тепловые явления и превращения энергии. Термодинамика описывает взаимосвязь между теплотой, работой и внутренней энергией систем, устанавливая фундаментальные законы, которые управляют всеми тепловыми процессами.</p>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="container">
+        <section class="content-section">
+            <div class="content-block fade-in">
+                <h2>Законы термодинамики</h2>
+                
+                <div class="topics-grid" style="margin-top: 30px;">
+                    <div class="topic-card">
+                        <div class="topic-icon">
+                            <i class="fas fa-1"></i>
+                        </div>
+                        <h3 class="topic-title">Первый закон</h3>
+                        <p class="topic-description">Закон сохранения энергии: изменение внутренней энергии системы равно сумме полученного тепла и совершенной над системой работы.</p>
+                    </div>
+                    
+                    <div class="topic-card">
+                        <div class="topic-icon">
+                            <i class="fas fa-2"></i>
+                        </div>
+                        <h3 class="topic-title">Второй закон</h3>
+                        <p class="topic-description">Невозможность создания вечного двигателя второго рода. Энтропия изолированной системы не убывает.</p>
+                    </div>
+                    
+                    <div class="topic-card">
+                        <div class="topic-icon">
+                            <i class="fas fa-3"></i>
+                        </div>
+                        <h3 class="topic-title">Третий закон</h3>
+                        <p class="topic-description">При приближении температуры к абсолютному нулю энтропия любой системы стремится к постоянному минимуму.</p>
+                    </div>
+                    
+                    <div class="topic-card">
+                        <div class="topic-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3 class="topic-title">Нулевой закон</h3>
+                        <p class="topic-description">Если две системы находятся в тепловом равновесии с третьей, то они находятся в тепловом равновесии друг с другом.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block fade-in">
+                <h2>Основные формулы термодинамики</h2>
+                
+                <table class="formulas-table">
+                    <thead>
+                        <tr>
+                            <th>Формула</th>
+                            <th>Описание</th>
+                            <th>Обозначения</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>ΔU = Q - A</strong></td>
+                            <td>Первый закон термодинамики</td>
+                            <td>ΔU — изменение внутренней энергии, Q — полученное тепло, A — совершенная работа</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Q = c·m·ΔT</strong></td>
+                            <td>Количество теплоты при нагревании</td>
+                            <td>c — удельная теплоемкость, m — масса, ΔT — изменение температуры</td>
+                        </tr>
+                        <tr>
+                            <td><strong>pV = νRT</strong></td>
+                            <td>Уравнение состояния идеального газа</td>
+                            <td>p — давление, V — объем, ν — количество вещества, R — газовая постоянная, T — температура</td>
+                        </tr>
+                        <tr>
+                            <td><strong>A = p·ΔV</strong></td>
+                            <td>Работа газа при изобарном процессе</td>
+                            <td>p — давление, ΔV — изменение объема</td>
+                        </tr>
+                        <tr>
+                            <td><strong>η = (Q₁ - Q₂)/Q₁</strong></td>
+                            <td>КПД тепловой машины</td>
+                            <td>η — коэффициент полезного действия, Q₁ — полученное тепло, Q₂ — отданное тепло</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ΔS ≥ Q/T</strong></td>
+                            <td>Изменение энтропии</td>
+                            <td>ΔS — изменение энтропии, Q — теплота, T — температура</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="content-block fade-in">
+                <h2>Калькулятор термодинамических величин</h2>
+                <div class="calculator-grid">
+                    <div class="calculator-card">
+                        <h3>Теплота нагревания</h3>
+                        <div class="input-group">
+                            <label for="heat-mass">Масса (кг):</label>
+                            <input type="number" id="heat-mass" placeholder="Введите массу">
+                        </div>
+                        <div class="input-group">
+                            <label for="heat-capacity">Удельная теплоемкость (Дж/кг·°C):</label>
+                            <input type="number" id="heat-capacity" placeholder="Введите теплоемкость" value="4200">
+                        </div>
+                        <div class="input-group">
+                            <label for="temp-diff">Разность температур (°C):</label>
+                            <input type="number" id="temp-diff" placeholder="Введите ΔT">
+                        </div>
+                        <button class="btn btn-primary" onclick="calculateHeat()">Рассчитать</button>
+                        <div class="calc-result" id="heat-result"></div>
+                    </div>
+                    
+                    <div class="calculator-card">
+                        <h3>Давление идеального газа</h3>
+                        <div class="input-group">
+                            <label for="gas-moles">Количество вещества (моль):</label>
+                            <input type="number" id="gas-moles" placeholder="Введите ν">
+                        </div>
+                        <div class="input-group">
+                            <label for="gas-temp">Температура (K):</label>
+                            <input type="number" id="gas-temp" placeholder="Введите температуру">
+                        </div>
+                        <div class="input-group">
+                            <label for="gas-volume">Объем (м³):</label>
+                            <input type="number" id="gas-volume" placeholder="Введите объем">
+                        </div>
+                        <button class="btn btn-primary" onclick="calculateGasPressure()">Рассчитать</button>
+                        <div class="calc-result" id="gas-result"></div>
+                    </div>
+                    
+                    <div class="calculator-card">
+                        <h3>КПД тепловой машины</h3>
+                        <div class="input-group">
+                            <label for="heat-in">Полученное тепло Q₁ (Дж):</label>
+                            <input type="number" id="heat-in" placeholder="Введите Q₁">
+                        </div>
+                        <div class="input-group">
+                            <label for="heat-out">Отданное тепло Q₂ (Дж):</label>
+                            <input type="number" id="heat-out" placeholder="Введите Q₂">
+                        </div>
+                        <button class="btn btn-primary" onclick="calculateEfficiency()">Рассчитать</button>
+                        <div class="calc-result" id="efficiency-result"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block fade-in">
+                <h2>Термодинамические процессы</h2>
+                
+                <h3>Изопроцессы</h3>
+                <p><strong>Изотермический процесс</strong> (T = const): происходит при постоянной температуре. Для идеального газа описывается законом Бойля-Мариотта: pV = const.</p>
+                <p><strong>Изобарный процесс</strong> (p = const): происходит при постоянном давлении. Опиывается законом Гей-Люссака: V/T = const.</p>
+                <p><strong>Изохорный процесс</strong> (V = const): происходит при постоянном объеме. Опиывается законом Шарля: p/T = const.</p>
+                <p><strong>Адиабатный процесс</strong>: происходит без теплообмена с окружающей средой (Q = 0). Используется в описании циклов двигателей внутреннего сгорания.</p>
+                
+                <h3>Тепловые машины</h3>
+                <p>Тепловые машины преобразуют тепловую энергию в механическую работу. Наибольшее теоретическое значение КПД имеет цикл Карно, который определяется формулой: η = 1 - T₂/T₁, где T₁ — температура нагревателя, T₂ — температура холодильника.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="../index.html" class="logo">
+                        <i class="fas fa-atom"></i>
+                        <span>PhysicsHub</span>
+                    </a>
+                    <p>Образовательная платформа для изучения физики</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Разделы</h4>
+                    <ul>
+                        <li><a href="../pages/mechanics.html"><i class="fas fa-chevron-right"></i> Механика</a></li>
+                        <li><a href="../pages/thermodynamics.html"><i class="fas fa-chevron-right"></i> Термодинамика</a></li>
+                        <li><a href="../pages/electromagnetism.html"><i class="fas fa-chevron-right"></i> Электромагнетизм</a></li>
+                        <li><a href="../pages/quantum.html"><i class="fas fa-chevron-right"></i> Квантовая физика</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Инструменты</h4>
+                    <ul>
+                        <li><a href="../pages/calculator.html"><i class="fas fa-chevron-right"></i> Физический калькулятор</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Формулы</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Задачи</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Симуляции</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Контакты</h4>
+                    <p><i class="fas fa-envelope"></i> contact@physicshub.ru</p>
+                    <p><i class="fas fa-phone"></i> +7 (XXX) XXX-XX-XX</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 PhysicsHub. Все права защищены.</p>
+                <p>Сайт создан для образовательных целей.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // Функции для калькулятора термодинамики
+        function calculateHeat() {
+            const mass = parseFloat(document.getElementById('heat-mass').value);
+            const capacity = parseFloat(document.getElementById('heat-capacity').value);
+            const tempDiff = parseFloat(document.getElementById('temp-diff').value);
+            const resultElement = document.getElementById('heat-result');
+            
+            if (isNaN(mass) || isNaN(capacity) || isNaN(tempDiff)) {
+                resultElement.textContent = 'Пожалуйста, введите все значения';
+            } else {
+                const heat = mass * capacity * tempDiff;
+                resultElement.textContent = `Количество теплоты: ${heat.toFixed(2)} Дж`;
+            }
+            resultElement.classList.add('show');
+        }
+        
+        function calculateGasPressure() {
+            const moles = parseFloat(document.getElementById('gas-moles').value);
+            const temp = parseFloat(document.getElementById('gas-temp').value);
+            const volume = parseFloat(document.getElementById('gas-volume').value);
+            const resultElement = document.getElementById('gas-result');
+            const R = 8.314; // газовая постоянная
+            
+            if (isNaN(moles) || isNaN(temp) || isNaN(volume)) {
+                resultElement.textContent = 'Пожалуйста, введите все значения';
+            } else {
+                const pressure = (moles * R * temp) / volume;
+                resultElement.textContent = `Давление газа: ${pressure.toFixed(2)} Па`;
+            }
+            resultElement.classList.add('show');
+        }
+        
+        function calculateEfficiency() {
+            const heatIn = parseFloat(document.getElementById('heat-in').value);
+            const heatOut = parseFloat(document.getElementById('heat-out').value);
+            const resultElement = document.getElementById('efficiency-result');
+            
+            if (isNaN(heatIn) || isNaN(heatOut)) {
+                resultElement.textContent = 'Пожалуйста, введите оба значения';
+            } else if (heatIn <= heatOut) {
+                resultElement.textContent = 'Q₁ должно быть больше Q₂';
+            } else {
+                const efficiency = ((heatIn - heatOut) / heatIn) * 100;
+                resultElement.textContent = `КПД тепловой машины: ${efficiency.toFixed(2)}%`;
+            }
+            resultElement.classList.add('show');
+        }
+    </script>
+</body>
+</html>
